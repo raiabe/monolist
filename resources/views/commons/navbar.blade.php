@@ -30,7 +30,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="#">マイページ</a>
+                                    <a href="{{ route('users.show', Auth::id()) }}">マイページ</a>
                                 </li>
                                 <li role="separator" class="divider"></li>
                                 <li>
@@ -39,8 +39,8 @@
                             </ul>
                         </li>
                     @else
-                        <li><a href="{{route('signup.get')}}">新規登録</a></li>
-                        <li><a href="{{route('login')}}">ログイン</a></li>
+                        <li><a href="{{ route('signup.get') }}">新規登録</a></li>
+                        <li><a href="{{ route('login') }}">ログイン</a></li>
                     @endif
                 </ul>
             </div>
